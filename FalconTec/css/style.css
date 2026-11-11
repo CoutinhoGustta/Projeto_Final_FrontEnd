@@ -675,3 +675,84 @@ header {
     padding: 30px;
   }
 }
+
+/* ==============================
+   RODAPÉ
+============================== */
+
+.rodape {
+  background-color: #062d68;
+  color: #ffffff;
+  padding: 55px 7% 20px;
+}
+
+.rodape-conteudo {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 0.7fr 1fr;
+  gap: 70px;
+  padding-bottom: 40px;
+}
+
+.rodape-logo img {
+  width: 190px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.rodape-empresa p {
+  max-width: 400px;
+  color: #dce7f5;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.rodape-empresa strong {
+  color: #ffb7b7;
+  font-size: 15px;
+}
+
+.rodape-links,
+.rodape-contato {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.rodape h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.rodape-links a,
+.rodape-contato p {
+  color: #dce7f5;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.rodape-links a:hover {
+  color: #ff7777;
+}
+
+.rodape-base {
+  border-top: 1px solid #42618a;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.rodape-base p {
+  color: #cbd8e9;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .rodape-conteudo {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
