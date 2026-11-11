@@ -987,3 +987,65 @@ header {
     font-size: 16px;
   }
 }
+
+/* ==========================================
+   CHAMADA FINAL PARA ATENDIMENTO
+========================================== */
+
+.chamada-atendimento {
+  background: linear-gradient(110deg, #062d68, #0755a5);
+  padding: 65px 6%;
+  text-align: center;
+}
+
+.chamada-atendimento-conteudo {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.chamada-atendimento-conteudo span {
+  color: #ffb7b7;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.chamada-atendimento-conteudo h2 {
+  color: #ffffff;
+  font-size: 34px;
+  margin: 16px 0;
+}
+
+.chamada-atendimento-conteudo p {
+  color: #eaf2fc;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.btn-chamada-atendimento {
+  display: inline-block;
+  background-color: #e31318;
+  color: #ffffff;
+  padding: 14px 26px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-chamada-atendimento:hover {
+  background-color: #bd1015;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 760px) {
+  .chamada-atendimento {
+    padding: 50px 7%;
+  }
+
+  .chamada-atendimento-conteudo h2 {
+    font-size: 28px;
+  }
+}
