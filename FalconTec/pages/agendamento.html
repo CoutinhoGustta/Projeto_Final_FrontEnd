@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Solicite um atendimento técnico com a Falcontec Refrigeração."
+    />
+
+    <title>Agendamento | Falcontec Refrigeração</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ==========================================
+         CABEÇALHO E NAVEGAÇÃO
+    ========================================== -->
+    <header>
+      <nav class="navbar">
+        <!-- LOGOTIPO -->
+        <a href="../index.html" class="logo">
+          <img src="../img/falcontec_logo.png" alt="Falcontec Refrigeração" />
+        </a>
+
+        <!-- MENU PRINCIPAL -->
+        <ul class="nav-links">
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="../index.html#sobre">Sobre nós</a></li>
+          <li><a href="../index.html#contato">Contato</a></li>
+        </ul>
+
+        <a href="agendamento.html" class="btn-agendamento ativo">
+          Solicitar atendimento
+        </a>
+      </nav>
+    </header>
+
+    <!-- ==========================================
+         CONTEÚDO PRINCIPAL
+    ========================================== -->
+    <main>
+      <!-- APRESENTAÇÃO DA PÁGINA -->
+      <section class="agendamento-banner">
+        <div class="agendamento-banner-conteudo">
+          <span>ATENDIMENTO FALCONTEC</span>
+
+          <h1>Solicite seu atendimento</h1>
+
+          <p>
+            Preencha as informações abaixo para que nossa equipe possa conhecer
+            sua necessidade e entrar em contato.
+          </p>
+        </div>
+      </section>
+
+      
+      <!-- FORMULÁRIO DE AGENDAMENTO -->
+      <section class="agendamento-container">
+
+        <div class="agendamento-formulario">
+
+          <!-- CABEÇALHO DO FORMULÁRIO -->
+          <div class="formulario-header">
+            <span>SOLICITAÇÃO DE SERVIÇO</span>
+            <h2>Informações do atendimento</h2>
+            <p>
+              Informe os dados abaixo para que nossa equipe
+              possa avaliar sua solicitação.
+            </p>
+          </div>
+
+          <form id="form-agendamento">
+
+            <!-- DADOS DO CLIENTE -->
+            <div class="formulario-grupo">
+              <h3>01. Dados do cliente</h3>
+
+              <div class="formulario-campos">
+
+                <div class="campo">
+                  <label for="nome">Nome completo</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                  />
+                </div>
+
+                <div class="campo">
+                  <label for="telefone">Telefone / WhatsApp</label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(83) 99999-9999"
+                    required
+                  />
+                </div>
+
+                <div class="campo campo-completo">
+                  <label for="email">E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="seuemail@exemplo.com"
+                  />
+                </div>
+
+              </div>
+            </div>
+
+            <!-- DADOS DO EQUIPAMENTO -->
+            <div class="formulario-grupo">
+              <h3>02. Dados do equipamento</h3>
+
+              <div class="formulario-campos">
+
+                <div class="campo">
+                  <label for="equipamento">Tipo de equipamento</label>
+                  <select id="equipamento" name="equipamento" required>
+                    <option value="">Selecione o equipamento</option>
+                    <option value="Geladeira">Geladeira</option>
+                    <option value="Freezer">Freezer</option>
+                    <option value="Ar-condicionado">Ar-condicionado</option>
+                    <option value="Câmara fria">Câmara fria</option>
+                    <option value="Balcão refrigerado">Balcão refrigerado</option>
+                    <option value="Máquina de gelo">Máquina de gelo</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+
+                <div class="campo">
+                  <label for="marca">Marca do equipamento</label>
+                  <input
+                    type="text"
+                    id="marca"
+                    name="marca"
+                    placeholder="Ex.: Elgin, Midea, Gree..."
+                    required
+                  />
+                </div>
+
+                <div class="campo campo-completo">
+                  <label for="problema">Descreva o problema</label>
+                  <textarea
+                    id="problema"
+                    name="problema"
+                    rows="5"
+                    placeholder="Conte brevemente o que está acontecendo com o equipamento..."
+                    required
+                  ></textarea>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PREFERÊNCIA DE ATENDIMENTO -->
+            <div class="formulario-grupo">
+              <h3>03. Preferência de atendimento</h3>
+
+              <div class="formulario-campos">
+
+                <div class="campo">
+                  <label for="servico">Serviço desejado</label>
+                  <select id="servico" name="servico" required>
+                    <option value="">Selecione o serviço</option>
+                    <option value="Manutenção corretiva">Manutenção corretiva</option>
+                    <option value="Manutenção preventiva">Manutenção preventiva</option>
+                    <option value="Instalação">Instalação</option>
+                    <option value="Avaliação técnica">Avaliação técnica</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+
+                <div class="campo">
+                  <label for="data">Data preferencial</label>
+                  <input
+                    type="date"
+                    id="data"
+                    name="data"
+                    required
+                  />
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ENVIO DA SOLICITAÇÃO -->
+            <div class="formulario-acoes">
+              <p>
+                Após preencher, você poderá encaminhar sua solicitação
+                diretamente para nossa equipe.
+              </p>
+
+              <button type="submit" class="btn-enviar-agendamento">
+                Enviar solicitação
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+
+      </section>
+
+      </section>
+    </main>
+
+    <!-- ==========================================
+         RODAPÉ
+    ========================================== -->
+    <footer class="rodape">
+      <div class="rodape-conteudo">
+        <!-- IDENTIDADE DA EMPRESA -->
+        <div class="rodape-empresa">
+          <a href="../index.html" class="rodape-logo">
+            <img src="../img/falcontec_logo.png" alt="Falcontec Refrigeração" />
+          </a>
+
+          <p>
+            Assistência técnica especializada em refrigeração, manutenção e
+            instalação de equipamentos.
+          </p>
+
+          <span>Qualidade, agilidade e prontidão.</span>
+        </div>
+
+        <!-- NAVEGAÇÃO -->
+        <div class="rodape-links">
+          <h3>Navegação</h3>
+
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="../index.html#sobre">Sobre nós</a></li>
+            <li><a href="../index.html#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTATO -->
+        <div class="rodape-contato">
+          <h3>Entre em contato</h3>
+
+          <p>Telefone: (83) 3238-7600</p>
+          <p>E-mail: falcontec@hotmail.com</p>
+          <p>Instagram: @falcontec.refrigeração</p>
+          <p>João Pessoa - PB</p>
+        </div>
+      </div>
+
+      <!-- DIREITOS AUTORAIS -->
+      <div class="rodape-base">
+        <p>© 2026 Falcontec Refrigeração. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

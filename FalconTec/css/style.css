@@ -1049,3 +1049,208 @@ header {
     font-size: 28px;
   }
 }
+
+/* ==========================================
+   ARQUIVO: style.css
+   PÁGINA DE AGENDAMENTO
+========================================== */
+
+/* BANNER PRINCIPAL */
+.agendamento-banner {
+  background: linear-gradient(110deg, #062d68, #0755a5);
+  padding: 65px 6%;
+  text-align: center;
+}
+
+.agendamento-banner-conteudo {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.agendamento-banner-conteudo span {
+  color: #ffb7b7;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.agendamento-banner-conteudo h1 {
+  color: #ffffff;
+  font-size: 42px;
+  margin: 16px 0;
+}
+
+.agendamento-banner-conteudo p {
+  color: #eaf2fc;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* CONTAINER DO FORMULÁRIO */
+.agendamento-container {
+  background-color: #f5f8fc;
+  padding: 70px 6%;
+}
+
+.agendamento-formulario {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 45px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* CABEÇALHO DO FORMULÁRIO */
+.formulario-header {
+  margin-bottom: 35px;
+}
+
+.formulario-header span {
+  color: var(--vermelho);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.formulario-header h2 {
+  color: var(--azul-escuro);
+  font-size: 29px;
+  margin: 12px 0;
+}
+
+.formulario-header p {
+  color: #526174;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* GRUPOS DO FORMULÁRIO */
+.formulario-grupo {
+  padding: 30px 0;
+  border-top: 1px solid #e5eaf0;
+}
+
+.formulario-grupo h3 {
+  color: var(--azul-escuro);
+  font-size: 19px;
+  margin-bottom: 25px;
+}
+
+/* ORGANIZAÇÃO DOS CAMPOS */
+.formulario-campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.campo-completo {
+  grid-column: 1 / -1;
+}
+
+/* RÓTULOS */
+.campo label {
+  color: #26364a;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* CAMPOS DE PREENCHIMENTO */
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d5deea;
+  border-radius: 7px;
+  background-color: #ffffff;
+  color: #26364a;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+/* DESTAQUE AO SELECIONAR UM CAMPO */
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 0 3px rgba(7, 85, 165, 0.1);
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+/* BOTÃO DE ENVIO */
+.formulario-acoes {
+  padding-top: 25px;
+  border-top: 1px solid #e5eaf0;
+}
+
+.formulario-acoes p {
+  color: #526174;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.btn-enviar-agendamento {
+  border: none;
+  background-color: var(--vermelho);
+  color: #ffffff;
+  padding: 15px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-enviar-agendamento:hover {
+  background-color: #bd1015;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 760px) {
+  .agendamento-banner {
+    padding: 50px 7%;
+  }
+
+  .agendamento-banner-conteudo h1 {
+    font-size: 32px;
+  }
+
+  .agendamento-container {
+    padding: 40px 5%;
+  }
+
+  .agendamento-formulario {
+    padding: 28px 22px;
+  }
+
+  .formulario-campos {
+    grid-template-columns: 1fr;
+  }
+
+  .campo-completo {
+    grid-column: auto;
+  }
+
+  .formulario-header h2 {
+    font-size: 25px;
+  }
+
+  .btn-enviar-agendamento {
+    width: 100%;
+  }
+}
