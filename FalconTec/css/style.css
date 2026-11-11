@@ -1,6 +1,11 @@
-/* ==============================
+/* ==========================================
+   ARQUIVO: style.css
+   ESTILIZAÇÃO GERAL DO SITE FALCONTEC
+========================================== */
+
+/* ==========================================
    CONFIGURAÇÕES GERAIS
-============================== */
+========================================== */
 
 * {
   margin: 0;
@@ -8,6 +13,7 @@
   box-sizing: border-box;
 }
 
+/* Variáveis de cores do projeto */
 :root {
   --azul-escuro: #073574;
   --azul-principal: #0755a5;
@@ -17,26 +23,29 @@
   --texto: #172b49;
 }
 
+/* Configurações principais do documento */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--branco);
   color: var(--texto);
 }
 
+/* Padronização dos links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* ==============================
-   CABEÇALHO E MENU
-============================== */
+/* ==========================================
+   CABEÇALHO E MENU DE NAVEGAÇÃO
+========================================== */
 
 header {
   background-color: var(--branco);
   border-bottom: 1px solid #e2e8f0;
 }
 
+/* Organização dos elementos do cabeçalho */
 .navbar {
   max-width: 1500px;
   min-height: 105px;
@@ -49,6 +58,7 @@ header {
   gap: 35px;
 }
 
+/* Logo da Falcontec */
 .logo {
   display: flex;
   align-items: center;
@@ -62,6 +72,7 @@ header {
   object-fit: contain;
 }
 
+/* Organização dos links de navegação */
 .nav-links {
   list-style: none;
   display: flex;
@@ -69,6 +80,7 @@ header {
   gap: 12px;
 }
 
+/* Aparência dos links */
 .nav-links a {
   display: block;
   padding: 14px 20px;
@@ -80,16 +92,19 @@ header {
   transition: 0.2s;
 }
 
+/* Efeito ao passar o mouse */
 .nav-links a:hover {
   background-color: var(--azul-claro);
   color: var(--azul-principal);
 }
 
-.nav-links li:first-child a {
-  background-color: var(--azul-escuro);
-  color: var(--branco);
+/* Destaque somente da página atualmente acessada */
+.nav-links a.ativo {
+  color: var(--azul-principal);
+  font-weight: bold;
 }
 
+/* Botão de solicitação de atendimento */
 .btn-agendamento {
   background-color: var(--vermelho);
   color: var(--branco);
@@ -104,14 +119,15 @@ header {
   transition: 0.2s;
 }
 
+/* Efeito dos botões ao passar o mouse */
 .btn-agendamento:hover,
 .btn-primary:hover {
   background-color: #bd1015;
 }
 
-/* ==============================
-   BANNER PRINCIPAL
-============================== */
+/* ==========================================
+   BANNER PRINCIPAL (HERO)
+========================================== */
 
 .hero {
   min-height: 490px;
@@ -125,6 +141,7 @@ header {
   position: relative;
 }
 
+/* Conteúdo textual do banner */
 .hero-content {
   padding: 65px 0 65px 6%;
   color: var(--branco);
@@ -132,6 +149,7 @@ header {
   z-index: 2;
 }
 
+/* Identificação da área de atuação */
 .hero-tag {
   display: inline-block;
   padding: 9px 17px;
@@ -144,6 +162,7 @@ header {
   font-weight: 600;
 }
 
+/* Título principal */
 .hero h1 {
   max-width: 700px;
   margin-bottom: 20px;
@@ -154,6 +173,7 @@ header {
   letter-spacing: -1.5px;
 }
 
+/* Texto descritivo */
 .hero p {
   max-width: 570px;
   margin-bottom: 30px;
@@ -163,6 +183,7 @@ header {
   color: #f0f5ff;
 }
 
+/* Organização dos botões */
 .hero-buttons {
   display: flex;
   align-items: center;
@@ -170,6 +191,7 @@ header {
   flex-wrap: wrap;
 }
 
+/* Estilo compartilhado dos botões */
 .btn-primary,
 .btn-secondary {
   display: inline-block;
@@ -182,12 +204,14 @@ header {
   transition: 0.2s;
 }
 
+/* Botão principal */
 .btn-primary {
   background-color: var(--vermelho);
   color: var(--branco);
   border: 1px solid var(--vermelho);
 }
 
+/* Botão secundário */
 .btn-secondary {
   background-color: transparent;
   color: var(--branco);
@@ -199,16 +223,18 @@ header {
   color: var(--azul-escuro);
 }
 
-/* ==============================
-   IMAGEM DO BANNER
-============================== */
+/* ==========================================
+   IMAGEM DO BANNER PRINCIPAL
+========================================== */
 
+/* Área que contém a imagem */
 .hero-image {
   height: 100%;
   min-height: 490px;
   position: relative;
 }
 
+/* Degradê para integrar a imagem ao fundo */
 .hero-image::before {
   content: "";
   position: absolute;
@@ -218,6 +244,7 @@ header {
   background: linear-gradient(90deg, #06458f 0%, transparent 45%);
 }
 
+/* Ajuste da imagem */
 .hero-image img {
   width: 100%;
   height: 100%;
@@ -226,10 +253,11 @@ header {
   object-position: center;
 }
 
-/* ==============================
-   RESPONSIVIDADE
-============================== */
+/* ==========================================
+   RESPONSIVIDADE DO CABEÇALHO E BANNER
+========================================== */
 
+/* Telas intermediárias */
 @media (max-width: 1050px) {
   .navbar {
     padding: 15px 25px;
@@ -255,6 +283,7 @@ header {
   }
 }
 
+/* Celulares e telas menores */
 @media (max-width: 760px) {
   .navbar {
     flex-wrap: wrap;
@@ -289,9 +318,9 @@ header {
   }
 }
 
-/* ==============================
-   DIFERENCIAIS
-============================== */
+/* ==========================================
+   DIFERENCIAIS DA FALCONTEC
+========================================== */
 
 .diferenciais {
   display: grid;
@@ -303,6 +332,7 @@ header {
   gap: 25px;
 }
 
+/* Organização dos cartões */
 .diferencial {
   display: flex;
   align-items: center;
@@ -313,10 +343,12 @@ header {
   border-right: 1px solid #b7c9e2;
 }
 
+/* Remove a divisória do último cartão */
 .diferencial:last-child {
   border-right: none;
 }
 
+/* Ícones dos diferenciais */
 .diferencial-icon {
   flex-shrink: 0;
   color: #073b91;
@@ -324,6 +356,7 @@ header {
   font-weight: bold;
 }
 
+/* Títulos e descrições */
 .diferencial h2 {
   color: #082f70;
   font-size: 18px;
@@ -336,6 +369,7 @@ header {
   line-height: 1.4;
 }
 
+/* Adaptação para telas intermediárias */
 @media (max-width: 900px) {
   .diferenciais {
     grid-template-columns: repeat(2, 1fr);
@@ -346,6 +380,7 @@ header {
   }
 }
 
+/* Adaptação para celulares */
 @media (max-width: 550px) {
   .diferenciais {
     grid-template-columns: 1fr;
@@ -362,9 +397,9 @@ header {
   }
 }
 
-/* ==============================
-   SEÇÃO NOSSOS SERVIÇOS
-============================== */
+/* ==========================================
+   DESTAQUE DOS SERVIÇOS NA PÁGINA INICIAL
+========================================== */
 
 .servicos-destaque {
   background-color: #073574;
@@ -372,6 +407,7 @@ header {
   text-align: center;
 }
 
+/* Cabeçalho da seção */
 .servicos-header {
   margin-bottom: 40px;
 }
@@ -394,6 +430,7 @@ header {
   font-size: 17px;
 }
 
+/* Grade de cartões */
 .servicos-grid {
   max-width: 1350px;
   margin: 0 auto 40px;
@@ -403,6 +440,7 @@ header {
   gap: 22px;
 }
 
+/* Cartões individuais */
 .servico-card {
   background-color: #ffffff;
   border-radius: 12px;
@@ -411,10 +449,12 @@ header {
   transition: transform 0.2s;
 }
 
+/* Efeito ao passar o mouse */
 .servico-card:hover {
   transform: translateY(-5px);
 }
 
+/* Imagens dos cartões */
 .servico-card img {
   width: 100%;
   height: 190px;
@@ -422,6 +462,7 @@ header {
   display: block;
 }
 
+/* Conteúdo dos cartões */
 .servico-info {
   padding: 22px;
 }
@@ -438,6 +479,7 @@ header {
   line-height: 1.5;
 }
 
+/* Botão para acessar a página de serviços */
 .btn-ver-servicos {
   display: inline-block;
   background-color: #e31318;
@@ -453,12 +495,14 @@ header {
   background-color: #bd1015;
 }
 
+/* Adaptação dos cartões para telas intermediárias */
 @media (max-width: 1000px) {
   .servicos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Adaptação dos cartões para celulares */
 @media (max-width: 550px) {
   .servicos-grid {
     grid-template-columns: 1fr;
@@ -469,9 +513,9 @@ header {
   }
 }
 
-/* ==============================
-   SOBRE A FALCONTEC
-============================== */
+/* ==========================================
+   SEÇÃO SOBRE A FALCONTEC
+========================================== */
 
 .sobre {
   max-width: 1450px;
@@ -484,10 +528,12 @@ header {
   gap: 65px;
 }
 
+/* Área de conteúdo textual */
 .sobre-conteudo {
   max-width: 600px;
 }
 
+/* Identificação da seção */
 .sobre-tag {
   color: var(--vermelho);
   font-size: 14px;
@@ -495,6 +541,7 @@ header {
   letter-spacing: 1.5px;
 }
 
+/* Título e textos */
 .sobre-conteudo h2 {
   color: var(--azul-escuro);
   font-size: 38px;
@@ -509,6 +556,7 @@ header {
   margin-bottom: 16px;
 }
 
+/* Destaque dos anos de experiência */
 .sobre-destaque {
   display: flex;
   align-items: center;
@@ -529,6 +577,7 @@ header {
   font-weight: bold;
 }
 
+/* Imagem da equipe */
 .sobre-imagem {
   height: 400px;
   overflow: hidden;
@@ -542,6 +591,7 @@ header {
   object-fit: cover;
 }
 
+/* Adaptação para telas menores */
 @media (max-width: 760px) {
   .sobre {
     grid-template-columns: 1fr;
@@ -558,9 +608,9 @@ header {
   }
 }
 
-/* ==============================
-   CONTATO
-============================== */
+/* ==========================================
+   SEÇÃO DE CONTATO
+========================================== */
 
 .contato {
   background-color: #f1f5fc;
@@ -572,6 +622,7 @@ header {
   gap: 70px;
 }
 
+/* Identificação da seção */
 .contato-tag {
   color: var(--vermelho);
   font-size: 14px;
@@ -579,6 +630,7 @@ header {
   letter-spacing: 1.5px;
 }
 
+/* Título e descrição */
 .contato-conteudo h2 {
   color: var(--azul-escuro);
   font-size: 38px;
@@ -592,12 +644,14 @@ header {
   max-width: 550px;
 }
 
+/* Organização das informações */
 .contato-informacoes {
   display: grid;
   gap: 25px;
   margin-top: 35px;
 }
 
+/* Ícones e dados de contato */
 .contato-item {
   display: flex;
   align-items: flex-start;
@@ -612,6 +666,7 @@ header {
   text-align: center;
 }
 
+/* Títulos e textos das informações */
 .contato-item h3 {
   color: var(--azul-escuro);
   font-size: 17px;
@@ -624,6 +679,7 @@ header {
   line-height: 1.5;
 }
 
+/* Cartão de atendimento pelo WhatsApp */
 .contato-card {
   background-color: var(--azul-escuro);
   color: white;
@@ -644,6 +700,7 @@ header {
   margin-bottom: 28px;
 }
 
+/* Botão do WhatsApp */
 .btn-whatsapp {
   display: inline-block;
   background-color: #20a85a;
@@ -660,6 +717,7 @@ header {
   background-color: #168447;
 }
 
+/* Adaptação para celulares */
 @media (max-width: 760px) {
   .contato {
     grid-template-columns: 1fr;
@@ -676,9 +734,9 @@ header {
   }
 }
 
-/* ==============================
-   RODAPÉ
-============================== */
+/* ==========================================
+   RODAPÉ DO SITE
+========================================== */
 
 .rodape {
   background-color: #062d68;
@@ -686,6 +744,7 @@ header {
   padding: 55px 7% 20px;
 }
 
+/* Organização das colunas do rodapé */
 .rodape-conteudo {
   max-width: 1400px;
   margin: auto;
@@ -695,6 +754,7 @@ header {
   padding-bottom: 40px;
 }
 
+/* Logo no rodapé */
 .rodape-logo img {
   width: 190px;
   height: auto;
@@ -702,6 +762,7 @@ header {
   margin-bottom: 20px;
 }
 
+/* Descrição institucional e slogan */
 .rodape-empresa p {
   max-width: 400px;
   color: #dce7f5;
@@ -715,6 +776,7 @@ header {
   font-size: 15px;
 }
 
+/* Colunas de navegação e contato */
 .rodape-links,
 .rodape-contato {
   display: flex;
@@ -723,11 +785,13 @@ header {
   gap: 13px;
 }
 
+/* Títulos das colunas */
 .rodape h3 {
   font-size: 18px;
   margin-bottom: 8px;
 }
 
+/* Links e informações de contato */
 .rodape-links a,
 .rodape-contato p {
   color: #dce7f5;
@@ -735,10 +799,12 @@ header {
   transition: 0.2s;
 }
 
+/* Efeito dos links */
 .rodape-links a:hover {
   color: #ff7777;
 }
 
+/* Direitos autorais */
 .rodape-base {
   border-top: 1px solid #42618a;
   padding-top: 20px;
@@ -750,9 +816,174 @@ header {
   font-size: 13px;
 }
 
+/* Adaptação do rodapé para telas menores */
 @media (max-width: 760px) {
   .rodape-conteudo {
     grid-template-columns: 1fr;
     gap: 35px;
+  }
+}
+
+/* ==========================================
+   PÁGINA: servicos.html
+   ESTILIZAÇÃO DOS SERVIÇOS DETALHADOS
+========================================== */
+
+/* Organização da imagem e das informações */
+
+/* ==========================================
+   SERVIÇO DETALHADO
+   REFRIGERAÇÃO COMERCIAL
+========================================== */
+
+.servico-detalhado {
+  max-width: 1350px;
+  margin: 80px auto;
+  padding: 0 6%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Imagem do serviço */
+.servico-detalhado-imagem {
+  height: 380px;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.servico-detalhado-imagem img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Efeito suave na imagem */
+.servico-detalhado-imagem:hover img {
+  transform: scale(1.04);
+}
+
+/* Identificação do serviço */
+.servico-detalhado-conteudo > span {
+  color: var(--vermelho);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+/* Título */
+.servico-detalhado-conteudo h2 {
+  color: var(--azul-escuro);
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+/* Descrição */
+.servico-detalhado-conteudo p {
+  color: #526174;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* Subtítulo dos equipamentos */
+.servico-detalhado-conteudo h3 {
+  color: var(--azul-escuro);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* Equipamentos atendidos */
+.servico-detalhado-conteudo ul {
+  padding-left: 22px;
+  color: #526174;
+  line-height: 2;
+}
+
+/* Responsividade */
+@media (max-width: 760px) {
+  .servico-detalhado {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 50px auto;
+  }
+
+  .servico-detalhado-imagem {
+    height: 280px;
+  }
+
+  .servico-detalhado-conteudo h2 {
+    font-size: 29px;
+  }
+}
+
+/* ==========================================
+   BANNER PRINCIPAL DA PÁGINA DE SERVIÇOS
+========================================== */
+
+.servicos-banner {
+  min-height: 350px;
+  padding: 70px 8%;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(110deg, #062d68 0%, #0755a5 65%, #0b65b5 100%);
+}
+
+/* Organização do conteúdo do banner */
+.servicos-banner-conteudo {
+  max-width: 750px;
+  color: var(--branco);
+}
+
+/* Identificação da página */
+.servicos-banner-conteudo span {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  color: #ffb7b7;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Título principal */
+.servicos-banner-conteudo h1 {
+  margin-bottom: 18px;
+
+  font-size: clamp(38px, 4vw, 52px);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+/* Texto descritivo */
+.servicos-banner-conteudo p {
+  max-width: 650px;
+  margin-bottom: 28px;
+
+  color: #eaf2fc;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Adaptação para telas menores */
+@media (max-width: 760px) {
+  .servicos-banner {
+    min-height: 320px;
+    padding: 55px 7%;
+  }
+
+  .servicos-banner-conteudo h1 {
+    font-size: 36px;
+  }
+
+  .servicos-banner-conteudo p {
+    font-size: 16px;
   }
 }
