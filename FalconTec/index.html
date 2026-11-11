@@ -1,24 +1,39 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
+    <!-- ==========================================
+         ARQUIVO: index.html
+         PÁGINA INICIAL DA FALCONTEC REFRIGERAÇÃO
+    =========================================== -->
+
+    <!-- Configurações básicas e informações da página -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Falcontec Refrigeração - Assistência técnica especializada em refrigeração e manutenção."
     />
+
     <title>Falcontec Refrigeração</title>
 
+    <!-- Arquivos externos de estilo e JavaScript -->
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
   </head>
+
   <body>
+    <!-- ==========================================
+         CABEÇALHO E NAVEGAÇÃO PRINCIPAL
+         Logo, links de navegação e botão de atendimento
+    =========================================== -->
     <header>
       <nav class="navbar">
+        <!-- Logo da empresa -->
         <a href="index.html" class="logo">
           <img src="img/falcontec_logo.png" alt="Falcontec Refrigeração" />
         </a>
 
+        <!-- Links para as páginas e seções do site -->
         <ul class="nav-links">
           <li><a href="index.html">Início</a></li>
           <li><a href="pages/servicos.html">Serviços</a></li>
@@ -26,16 +41,25 @@
           <li><a href="#contato">Contato</a></li>
         </ul>
 
+        <!-- Acesso à página de solicitação de atendimento -->
         <a href="pages/agendamento.html" class="btn-agendamento">
           Solicitar atendimento
         </a>
       </nav>
     </header>
 
+    <!-- ==========================================
+         CONTEÚDO PRINCIPAL DA PÁGINA INICIAL
+    =========================================== -->
     <main>
+      <!-- ==========================================
+             BANNER PRINCIPAL (HERO)
+             Apresentação da empresa e atalhos para serviços
+        =========================================== -->
       <section class="hero">
+        <!-- Textos e botões de apresentação -->
         <div class="hero-content">
-          <span class="hero-tag"> Assistência técnica especializada </span>
+          <span class="hero-tag">Assistência técnica especializada</span>
 
           <h1>Cuidado e confiança para seus equipamentos.</h1>
 
@@ -44,6 +68,7 @@
             e sua empresa.
           </p>
 
+          <!-- Botões de acesso rápido -->
           <div class="hero-buttons">
             <a href="pages/agendamento.html" class="btn-primary">
               Solicitar atendimento
@@ -55,6 +80,7 @@
           </div>
         </div>
 
+        <!-- Imagem ilustrativa de um técnico -->
         <div class="hero-image">
           <img
             src="img/tecnico-refrigeracao.jpg"
@@ -63,7 +89,12 @@
         </div>
       </section>
 
+      <!-- ==========================================
+             DIFERENCIAIS DA FALCONTEC
+             Apresentação dos principais pontos fortes da empresa
+        =========================================== -->
       <section class="diferenciais">
+        <!-- Diferencial 1: qualidade -->
         <article class="diferencial">
           <span class="diferencial-icon" aria-hidden="true">✓</span>
           <div>
@@ -72,6 +103,7 @@
           </div>
         </article>
 
+        <!-- Diferencial 2: atendimento especializado -->
         <article class="diferencial">
           <span class="diferencial-icon" aria-hidden="true">❄</span>
           <div>
@@ -80,6 +112,7 @@
           </div>
         </article>
 
+        <!-- Diferencial 3: experiência -->
         <article class="diferencial">
           <span class="diferencial-icon" aria-hidden="true">★</span>
           <div>
@@ -88,6 +121,7 @@
           </div>
         </article>
 
+        <!-- Diferencial 4: suporte -->
         <article class="diferencial">
           <span class="diferencial-icon" aria-hidden="true">☎</span>
           <div>
@@ -97,7 +131,12 @@
         </article>
       </section>
 
+      <!-- ==========================================
+             DESTAQUE DOS SERVIÇOS
+             Apresentação resumida dos principais serviços
+        =========================================== -->
       <section class="servicos-destaque" id="servicos">
+        <!-- Título e descrição da seção -->
         <div class="servicos-header">
           <span>O QUE FAZEMOS</span>
           <h2>Nossos serviços</h2>
@@ -107,7 +146,9 @@
           </p>
         </div>
 
+        <!-- Cartões com os principais serviços oferecidos -->
         <div class="servicos-grid">
+          <!-- Serviço 1: refrigeração comercial -->
           <article class="servico-card">
             <img
               src="img/refrigeracao-comercial.jpg"
@@ -122,6 +163,7 @@
             </div>
           </article>
 
+          <!-- Serviço 2: refrigeração residencial -->
           <article class="servico-card">
             <img
               src="img/refrigeracao-residencial.jpg"
@@ -136,6 +178,7 @@
             </div>
           </article>
 
+          <!-- Serviço 3: climatização -->
           <article class="servico-card">
             <img
               src="img/ar-condicionado.jpg"
@@ -149,6 +192,7 @@
             </div>
           </article>
 
+          <!-- Serviço 4: manutenção preventiva -->
           <article class="servico-card">
             <img
               src="img/manutencao-preventiva.jpg"
@@ -163,12 +207,19 @@
             </div>
           </article>
         </div>
+
+        <!-- Link para a página com todos os serviços -->
         <a href="pages/servicos.html" class="btn-ver-servicos">
           Conhecer todos os serviços
         </a>
       </section>
 
+      <!-- ==========================================
+             SOBRE A EMPRESA
+             História, experiência e apresentação da Falcontec
+        =========================================== -->
       <section class="sobre" id="sobre">
+        <!-- Textos institucionais e tempo de experiência -->
         <div class="sobre-conteudo">
           <span class="sobre-tag">CONHEÇA NOSSA EMPRESA</span>
 
@@ -185,12 +236,14 @@
             cliente.
           </p>
 
+          <!-- Destaque para os anos de atuação -->
           <div class="sobre-destaque">
             <strong>20+</strong>
             <span>anos de experiência no mercado</span>
           </div>
         </div>
 
+        <!-- Fotografia da equipe da empresa -->
         <div class="sobre-imagem">
           <img
             src="img/equipe-falcontec.jpg"
@@ -199,7 +252,12 @@
         </div>
       </section>
 
+      <!-- ==========================================
+             CONTATO E ATENDIMENTO
+             Informações da empresa e acesso ao WhatsApp
+        =========================================== -->
       <section class="contato" id="contato">
+        <!-- Informações de contato e localização -->
         <div class="contato-conteudo">
           <span class="contato-tag">FALE CONOSCO</span>
 
@@ -210,7 +268,9 @@
             solicite seu atendimento.
           </p>
 
+          <!-- Telefone, endereço e horário de funcionamento -->
           <div class="contato-informacoes">
+            <!-- Telefone da empresa -->
             <div class="contato-item">
               <span class="contato-icone" aria-hidden="true">☎</span>
               <div>
@@ -219,6 +279,7 @@
               </div>
             </div>
 
+            <!-- Endereço da empresa -->
             <div class="contato-item">
               <span class="contato-icone" aria-hidden="true">⌖</span>
               <div>
@@ -227,6 +288,7 @@
               </div>
             </div>
 
+            <!-- Horários de atendimento -->
             <div class="contato-item">
               <span class="contato-icone" aria-hidden="true">◷</span>
               <div>
@@ -238,6 +300,7 @@
           </div>
         </div>
 
+        <!-- Cartão com acesso direto ao WhatsApp -->
         <div class="contato-card">
           <h3>Precisa de atendimento?</h3>
 
@@ -256,44 +319,52 @@
           </a>
         </div>
       </section>
-
-      <footer class="rodape">
-        <div class="rodape-conteudo">
-          <div class="rodape-empresa">
-            <a href="index.html" class="rodape-logo">
-              <img src="img/falcontec_logo.png" alt="Falcontec Refrigeração" />
-            </a>
-
-            <p>
-              A Falcontec Refrigeração oferece serviços de assistência técnica,
-              manutenção e instalação de equipamentos, com mais de 20 anos de
-              experiência.
-            </p>
-
-            <strong>Qualidade, agilidade e prontidão.</strong>
-          </div>
-
-          <div class="rodape-links">
-            <h3>Navegação</h3>
-            <a href="index.html">Início</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#sobre">Sobre nós</a>
-            <a href="#contato">Contato</a>
-          </div>
-
-          <div class="rodape-contato">
-            <h3>Entre em contato</h3>
-            <p>(83) 3238-7600</p>
-            <p>falcontec@hotmail.com</p>
-            <p>João Pessoa - PB</p>
-            <p>Instagram: @falcontec.refrigeração</p>
-          </div>
-        </div>
-
-        <div class="rodape-base">
-          <p>© 2026 Falcontec Refrigeração. Todos os direitos reservados.</p>
-        </div>
-      </footer>
     </main>
+
+    <!-- ==========================================
+         RODAPÉ DO SITE
+         Resumo institucional, navegação e contatos
+    =========================================== -->
+    <footer class="rodape">
+      <div class="rodape-conteudo">
+        <!-- Logo e breve descrição da empresa -->
+        <div class="rodape-empresa">
+          <a href="index.html" class="rodape-logo">
+            <img src="img/falcontec_logo.png" alt="Falcontec Refrigeração" />
+          </a>
+
+          <p>
+            A Falcontec Refrigeração oferece serviços de assistência técnica,
+            manutenção e instalação de equipamentos, com mais de 20 anos de
+            experiência.
+          </p>
+
+          <strong>Qualidade, agilidade e prontidão.</strong>
+        </div>
+
+        <!-- Links para navegação pelo site -->
+        <div class="rodape-links">
+          <h3>Navegação</h3>
+          <a href="index.html">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#sobre">Sobre nós</a>
+          <a href="#contato">Contato</a>
+        </div>
+
+        <!-- Informações adicionais de contato -->
+        <div class="rodape-contato">
+          <h3>Entre em contato</h3>
+          <p>(83) 3238-7600</p>
+          <p>falcontec@hotmail.com</p>
+          <p>João Pessoa - PB</p>
+          <p>Instagram: @falcontec.refrigeração</p>
+        </div>
+      </div>
+
+      <!-- Direitos autorais e identificação da empresa -->
+      <div class="rodape-base">
+        <p>© 2026 Falcontec Refrigeração. Todos os direitos reservados.</p>
+      </div>
+    </footer>
   </body>
 </html>
