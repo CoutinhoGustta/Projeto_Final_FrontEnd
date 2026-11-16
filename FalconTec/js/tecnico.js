@@ -43,7 +43,7 @@ function encerrarSessao() {
   localStorage.removeItem("sessaoFalcontec");
   sessionStorage.removeItem("sessaoFalcontec");
 
-  window.location.href = "login.html";
+  window.location.href = "tecnico.html";
 }
 
 // ==========================================
@@ -56,7 +56,7 @@ if (formularioLogin) {
 
   if (sessaoAtual) {
     window.location.href =
-      sessaoAtual.tipo === "admin" ? "admin.html" : "painel.html";
+      sessaoAtual.tipo === "admin" ? "admin.html" : "tecnico.html";
   }
 
   formularioLogin.addEventListener("submit", function (event) {
@@ -119,7 +119,7 @@ if (nomeAdministrador) {
 
   // Impede o acesso sem uma sessão administrativa
   if (!sessaoAtual || sessaoAtual.tipo !== "admin") {
-    window.location.replace("login.html");
+    window.location.replace("tecnico.html");
   } else {
     // Exibe o nome do administrador
     nomeAdministrador.textContent = sessaoAtual.nome;
