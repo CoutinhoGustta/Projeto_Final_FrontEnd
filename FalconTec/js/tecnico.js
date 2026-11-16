@@ -570,7 +570,6 @@ function atualizarListaOrdensAdmin() {
     informacoes.className = "item-ordem-informacoes";
 
     const cliente = document.createElement("p");
-    cliente.textContent = `Cliente: ${ordem.cliente}`;
 
     const clienteLabel = document.createElement("strong");
     clienteLabel.textContent = "Cliente: ";
@@ -724,7 +723,7 @@ function atualizarPainelTecnico(sessao) {
 
   if (minhasOrdens.length === 0) {
     const mensagem = document.createElement("p");
-
+    mensagem.className = "admin-lista-vazia";
     mensagem.textContent =
       "Você ainda não possui ordens de serviço atribuídas.";
 
@@ -736,39 +735,75 @@ function atualizarPainelTecnico(sessao) {
     const item = document.createElement("div");
     item.className = "item-ordem";
 
+    // Cabeçalho do cartão
+    const cabecalho = document.createElement("div");
+    cabecalho.className = "item-ordem-cabecalho";
+
     const titulo = document.createElement("h3");
+    titulo.className = "item-ordem-titulo";
     titulo.textContent = `Ordem de Serviço #${ordem.id}`;
 
+    const status = document.createElement("span");
+    status.className = "status-ordem";
+    status.textContent = ordem.status;
+
+    if (ordem.status === "Pendente") {
+      status.classList.add("status-pendente");
+    } else if (ordem.status === "Em andamento") {
+      status.classList.add("status-andamento");
+    } else if (ordem.status === "Concluído") {
+      status.classList.add("status-concluido");
+    } else if (ordem.status === "Cancelado") {
+      status.classList.add("status-cancelado");
+    }
+
+    cabecalho.append(titulo, status);
+
+    // Informações da ordem
+    const informacoes = document.createElement("div");
+    informacoes.className = "item-ordem-informacoes";
+
     const cliente = document.createElement("p");
-    cliente.textContent = `Cliente: ${ordem.cliente}`;
+    const clienteLabel = document.createElement("strong");
+    clienteLabel.textContent = "Cliente: ";
+    cliente.append(clienteLabel, document.createTextNode(ordem.cliente));
 
     const telefone = document.createElement("p");
-    telefone.textContent = `Telefone: ${ordem.telefone}`;
+    const telefoneLabel = document.createElement("strong");
+    telefoneLabel.textContent = "Telefone: ";
+    telefone.append(telefoneLabel, document.createTextNode(ordem.telefone));
 
     const equipamento = document.createElement("p");
-    equipamento.textContent = `Equipamento: ${ordem.equipamento}`;
-
-    const problema = document.createElement("p");
-    problema.textContent = `Problema relatado: ${ordem.problema}`;
+    const equipamentoLabel = document.createElement("strong");
+    equipamentoLabel.textContent = "Equipamento: ";
+    equipamento.append(
+      equipamentoLabel,
+      document.createTextNode(ordem.equipamento),
+    );
 
     const data = document.createElement("p");
-    data.textContent = `Data: ${formatarData(ordem.data)}`;
+    const dataLabel = document.createElement("strong");
+    dataLabel.textContent = "Data: ";
+    data.append(dataLabel, document.createTextNode(formatarData(ordem.data)));
 
-    const status = document.createElement("p");
-    status.textContent = `Status atual: ${ordem.status}`;
+    informacoes.append(cliente, telefone, equipamento, data);
 
+    // Problema relatado
+    const problema = document.createElement("div");
+    problema.className = "item-ordem-problema";
+
+    const problemaTitulo = document.createElement("strong");
+    problemaTitulo.textContent = "Problema relatado";
+
+    const problemaTexto = document.createElement("p");
+    problemaTexto.textContent = ordem.problema;
+
+    problema.append(problemaTitulo, problemaTexto);
+
+    // Seletor de status
     const seletorStatus = criarSeletorStatus(ordem, sessao);
 
-    item.append(
-      titulo,
-      cliente,
-      telefone,
-      equipamento,
-      problema,
-      data,
-      status,
-      seletorStatus,
-    );
+    item.append(cabecalho, informacoes, problema, seletorStatus);
 
     lista.appendChild(item);
   });

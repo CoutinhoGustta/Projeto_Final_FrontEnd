@@ -2144,3 +2144,160 @@ header {
     padding: 17px;
   }
 }
+
+/* ==========================================
+   CARTÕES DE ORDENS DE SERVIÇO
+   CABEÇALHO E INFORMAÇÕES
+========================================== */
+
+.item-ordem-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8edf3;
+}
+
+.item-ordem .item-ordem-titulo {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: var(--azul-escuro);
+  font-size: 18px;
+}
+
+.item-ordem-cabecalho .status-ordem {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.item-ordem-informacoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 25px;
+}
+
+.item-ordem-informacoes p {
+  margin: 0;
+  color: #657386;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.item-ordem-informacoes strong {
+  color: var(--azul-escuro);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+  .item-ordem {
+    padding: 20px;
+  }
+
+  .item-ordem-informacoes {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .item-ordem-cabecalho {
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================
+   PAINEL DO TÉCNICO
+   DETALHES DAS ORDENS DE SERVIÇO
+========================================== */
+
+/* ÁREA DO PROBLEMA RELATADO */
+
+.item-ordem-problema {
+  margin-top: 24px;
+  padding: 20px 22px;
+  background-color: #f5f8fc;
+  border: 1px solid #e3eaf3;
+  border-left: 4px solid var(--azul-principal);
+  border-radius: 8px;
+}
+
+.item-ordem-problema strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--azul-escuro);
+  font-size: 14px;
+}
+
+.item-ordem-problema p {
+  margin: 0;
+  color: #526174;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* ÁREA DE ALTERAÇÃO DO STATUS */
+
+.campo-status-ordem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #e8edf3;
+}
+
+.campo-status-ordem label {
+  color: var(--azul-escuro);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.campo-status-ordem select {
+  min-width: 200px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #d5deea;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #26364a;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.campo-status-ordem select:hover {
+  border-color: #aabbd0;
+}
+
+.campo-status-ordem select:focus {
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 0 3px rgba(7, 85, 165, 0.1);
+}
+
+/* ADAPTAÇÃO PARA CELULARES */
+
+@media (max-width: 480px) {
+  .item-ordem-problema {
+    padding: 17px;
+  }
+
+  .campo-status-ordem {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .campo-status-ordem select {
+    width: 100%;
+  }
+}
