@@ -38,6 +38,11 @@ function obterSessao() {
   }
 }
 
+// Define o destino conforme o tipo de usuário
+function redirecionarUsuario(sessao) {
+  window.location.href = sessao.tipo === "admin" ? "admin.html" : "painel.html";
+}
+
 // Encerra a sessão
 function encerrarSessao() {
   localStorage.removeItem("sessaoFalcontec");
@@ -55,8 +60,7 @@ if (formularioLogin) {
   const sessaoAtual = obterSessao();
 
   if (sessaoAtual) {
-    window.location.href =
-      sessaoAtual.tipo === "admin" ? "admin.html" : "tecnico.html";
+    redirecionarUsuario(sessaoAtual);
   }
 
   formularioLogin.addEventListener("submit", function (event) {
@@ -102,8 +106,7 @@ if (formularioLogin) {
     mensagemLogin.style.color = "#218838";
 
     setTimeout(function () {
-      window.location.href =
-        usuarioEncontrado.tipo === "admin" ? "admin.html" : "painel.html";
+      redirecionarUsuario(sessao);
     }, 700);
   });
 }
