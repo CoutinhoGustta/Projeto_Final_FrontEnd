@@ -56,7 +56,7 @@
         <div class="admin-resumo">
           <article class="admin-card">
             <span>Técnicos cadastrados</span>
-            <strong>0</strong>
+            <strong id="total-tecnicos">0</strong>
             <p>Equipe técnica</p>
           </article>
 
@@ -79,26 +79,87 @@
           </article>
         </div>
 
-        <!-- ÁREA DE GERENCIAMENTO -->
+        <!-- GERENCIAMENTO DE TÉCNICOS -->
+        <section class="admin-gerenciar-tecnicos" id="gerenciar-tecnicos">
+          <div class="admin-secao-titulo">
+            <span>GESTÃO DA EQUIPE</span>
+            <h2>Gerenciar técnicos</h2>
+            <p>
+              Cadastre os colaboradores que terão acesso à área técnica da
+              Falcontec.
+            </p>
+          </div>
+
+          <!-- FORMULÁRIO DE CADASTRO -->
+          <div class="admin-cadastro-tecnico">
+            <h3>Cadastrar novo técnico</h3>
+
+            <form id="form-cadastrar-tecnico">
+              <div class="admin-campo">
+                <label for="nome-tecnico">Nome completo</label>
+                <input
+                  type="text"
+                  id="nome-tecnico"
+                  name="nome"
+                  placeholder="Digite o nome do técnico"
+                  required
+                />
+              </div>
+
+              <div class="admin-campo">
+                <label for="usuario-tecnico">Nome de usuário</label>
+                <input
+                  type="text"
+                  id="usuario-tecnico"
+                  name="usuario"
+                  placeholder="Ex: joao.tecnico"
+                  required
+                />
+              </div>
+
+              <div class="admin-campo">
+                <label for="senha-tecnico">Senha de acesso</label>
+                <input
+                  type="password"
+                  id="senha-tecnico"
+                  name="senha"
+                  placeholder="Crie uma senha"
+                  minlength="6"
+                  required
+                />
+              </div>
+
+              <button type="submit" id="btn-cadastrar-tecnico">
+                Cadastrar técnico
+              </button>
+
+              <p id="mensagem-cadastro-tecnico" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <!-- LISTA DE TÉCNICOS -->
+          <div class="admin-lista-tecnicos">
+            <div class="admin-lista-cabecalho">
+              <h3>Técnicos cadastrados</h3>
+              <span id="quantidade-tecnicos">0 técnicos</span>
+            </div>
+
+            <div id="lista-tecnicos">
+              <p class="admin-lista-vazia">
+                Nenhum técnico cadastrado até o momento.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- OUTRAS ÁREAS DE GERENCIAMENTO -->
         <div class="admin-secao">
-          <h2>Gerenciamento</h2>
+          <h2>Outras funcionalidades</h2>
 
           <div class="admin-acoes">
             <article class="admin-acao">
               <div class="admin-acao-icone">
                 <span>01</span>
-              </div>
-
-              <h3>Gerenciar técnicos</h3>
-
-              <p>Cadastre, consulte e gerencie os colaboradores da equipe.</p>
-
-              <button type="button" disabled>Em desenvolvimento</button>
-            </article>
-
-            <article class="admin-acao">
-              <div class="admin-acao-icone">
-                <span>02</span>
               </div>
 
               <h3>Ordens de serviço</h3>
@@ -112,7 +173,7 @@
 
             <article class="admin-acao">
               <div class="admin-acao-icone">
-                <span>03</span>
+                <span>02</span>
               </div>
 
               <h3>Acompanhamento</h3>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Painel individual do técnico da Falcontec Refrigeração."
+    />
+
+    <title>Área do Técnico | Falcontec</title>
+
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+
+  <body>
+    <!-- PAINEL DO TÉCNICO -->
+    <main class="painel-admin">
+      <!-- CABEÇALHO -->
+      <header class="admin-header">
+        <div class="admin-identidade">
+          <img
+            src="../../../img/falcontec_logo.png"
+            alt="Falcontec Refrigeração"
+          />
+
+          <div>
+            <span>ÁREA TÉCNICA</span>
+            <h1>Painel do técnico</h1>
+          </div>
+        </div>
+
+        <div class="admin-usuario">
+          <div>
+            <strong id="nome-tecnico-logado">Técnico</strong>
+            <span>Técnico</span>
+          </div>
+
+          <button type="button" id="btn-sair">Sair</button>
+        </div>
+      </header>
+
+      <!-- CONTEÚDO PRINCIPAL -->
+      <section class="admin-conteudo">
+        <div class="admin-boas-vindas">
+          <span>FALCONTEC REFRIGERAÇÃO</span>
+
+          <h2 id="titulo-boas-vindas">Bem-vindo à sua área técnica</h2>
+
+          <p>
+            Consulte suas ordens de serviço e acompanhe os atendimentos sob sua
+            responsabilidade.
+          </p>
+        </div>
+
+        <!-- RESUMO DOS ATENDIMENTOS -->
+        <div class="admin-resumo">
+          <article class="admin-card">
+            <span>Ordens atribuídas</span>
+            <strong id="total-ordens">0</strong>
+            <p>Total sob sua responsabilidade</p>
+          </article>
+
+          <article class="admin-card">
+            <span>Serviços pendentes</span>
+            <strong id="total-pendentes">0</strong>
+            <p>Aguardando atendimento</p>
+          </article>
+
+          <article class="admin-card">
+            <span>Em andamento</span>
+            <strong id="total-andamento">0</strong>
+            <p>Atendimentos ativos</p>
+          </article>
+
+          <article class="admin-card">
+            <span>Concluídos</span>
+            <strong id="total-concluidos">0</strong>
+            <p>Serviços finalizados</p>
+          </article>
+        </div>
+
+        <!-- ORDENS DE SERVIÇO -->
+        <section class="admin-secao">
+          <h2>Minhas ordens de serviço</h2>
+
+          <p>
+            Aqui serão exibidos os atendimentos atribuídos a você pelo
+            administrador.
+          </p>
+
+          <div id="lista-ordens-tecnico">
+            <p class="admin-lista-vazia">
+              Você ainda não possui ordens de serviço atribuídas.
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <!-- RODAPÉ -->
+      <footer class="admin-rodape">
+        <p>Falcontec Refrigeração © 2026</p>
+        <span>Sistema de gerenciamento técnico</span>
+      </footer>
+    </main>
+
+    <script src="../../../js/tecnico.js"></script>
+  </body>
+</html>
