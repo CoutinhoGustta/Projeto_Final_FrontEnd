@@ -62,20 +62,32 @@
 
           <article class="admin-card">
             <span>Ordens de serviço</span>
-            <strong>0</strong>
+            <strong id="total-ordens-admin">0</strong>
             <p>Total de atendimentos</p>
           </article>
 
           <article class="admin-card">
+            <span>Serviços pendentes</span>
+            <strong id="total-pendentes-admin">0</strong>
+            <p>Aguardando atendimento</p>
+          </article>
+
+          <article class="admin-card">
             <span>Serviços em andamento</span>
-            <strong>0</strong>
+            <strong id="total-andamento-admin">0</strong>
             <p>Atendimentos ativos</p>
           </article>
 
           <article class="admin-card">
             <span>Serviços concluídos</span>
-            <strong>0</strong>
+            <strong id="total-concluidos-admin">0</strong>
             <p>Atendimentos finalizados</p>
+          </article>
+
+          <article class="admin-card">
+            <span>Serviços cancelados</span>
+            <strong id="total-cancelados-admin">0</strong>
+            <p>Atendimentos cancelados</p>
           </article>
         </div>
 
@@ -152,9 +164,126 @@
           </div>
         </section>
 
-        <!-- OUTRAS ÁREAS DE GERENCIAMENTO -->
+        <!-- GERENCIAMENTO DE ORDENS DE SERVIÇO -->
+        <section class="admin-gerenciar-tecnicos" id="gerenciar-ordens">
+          <div class="admin-secao-titulo">
+            <span>GESTÃO DE ATENDIMENTOS</span>
+            <h2>Ordens de serviço</h2>
+            <p>
+              Registre os atendimentos e atribua cada ordem ao técnico
+              responsável.
+            </p>
+          </div>
+
+          <!-- FORMULÁRIO DE NOVA ORDEM -->
+          <div class="admin-cadastro-tecnico">
+            <h3>Criar ordem de serviço</h3>
+
+            <form id="form-criar-ordem">
+              <div class="admin-campo">
+                <label for="cliente-ordem">Nome do cliente</label>
+                <input
+                  type="text"
+                  id="cliente-ordem"
+                  name="cliente"
+                  placeholder="Digite o nome do cliente"
+                  required
+                />
+              </div>
+
+              <div class="admin-campo">
+                <label for="telefone-ordem">Telefone para contato</label>
+                <input
+                  type="tel"
+                  id="telefone-ordem"
+                  name="telefone"
+                  placeholder="(83) 99999-9999"
+                  required
+                />
+              </div>
+
+              <div class="admin-campo">
+                <label for="equipamento-ordem">Equipamento</label>
+                <input
+                  type="text"
+                  id="equipamento-ordem"
+                  name="equipamento"
+                  placeholder="Ex: Geladeira, freezer, ar-condicionado"
+                  required
+                />
+              </div>
+
+              <div class="admin-campo">
+                <label for="problema-ordem">Descrição do problema</label>
+                <textarea
+                  id="problema-ordem"
+                  name="problema"
+                  rows="4"
+                  placeholder="Descreva o problema relatado pelo cliente"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="admin-campo">
+                <label for="tecnico-responsavel">Técnico responsável</label>
+                <select id="tecnico-responsavel" required>
+                  <option value="">Selecione um técnico</option>
+                </select>
+              </div>
+
+              <div class="admin-campo">
+                <label for="data-ordem">Data de recebimento</label>
+                <input type="date" id="data-ordem" name="data" required />
+              </div>
+
+              <button type="submit" id="btn-criar-ordem">
+                Criar ordem de serviço
+              </button>
+
+              <p id="mensagem-ordem" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <!-- LISTA DE ORDENS -->
+          <div class="admin-lista-tecnicos">
+            <div class="admin-filtros-ordens">
+              <div class="admin-campo">
+                <label for="buscar-ordem-admin">Pesquisar ordem</label>
+                <input
+                  type="search"
+                  id="buscar-ordem-admin"
+                  placeholder="Cliente, equipamento, técnico ou número..."
+                />
+              </div>
+
+              <div class="admin-campo">
+                <label for="filtro-status-admin">Filtrar por situação</label>
+                <select id="filtro-status-admin">
+                  <option value="Todas">Todas as situações</option>
+                  <option value="Pendente">Pendentes</option>
+                  <option value="Em andamento">Em andamento</option>
+                  <option value="Concluído">Concluídas</option>
+                  <option value="Cancelado">Canceladas</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="admin-lista-cabecalho">
+              <h3>Ordens cadastradas</h3>
+              <span id="quantidade-ordens">0 ordens</span>
+            </div>
+
+            <div id="lista-ordens-admin">
+              <p class="admin-lista-vazia">
+                Nenhuma ordem de serviço cadastrada até o momento.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ACOMPANHAMENTO -->
         <div class="admin-secao">
-          <h2>Outras funcionalidades</h2>
+          <h2>Acompanhamento</h2>
 
           <div class="admin-acoes">
             <article class="admin-acao">
@@ -162,21 +291,7 @@
                 <span>01</span>
               </div>
 
-              <h3>Ordens de serviço</h3>
-
-              <p>
-                Crie ordens de serviço e atribua responsáveis aos atendimentos.
-              </p>
-
-              <button type="button" disabled>Em desenvolvimento</button>
-            </article>
-
-            <article class="admin-acao">
-              <div class="admin-acao-icone">
-                <span>02</span>
-              </div>
-
-              <h3>Acompanhamento</h3>
+              <h3>Acompanhamento de serviços</h3>
 
               <p>Consulte o andamento dos serviços realizados pela equipe.</p>
 

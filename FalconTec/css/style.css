@@ -1754,3 +1754,393 @@ header {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================
+   STATUS DAS ORDENS DE SERVIÇO
+========================================== */
+
+.status-ordem {
+  display: inline-block;
+  width: fit-content;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.status-pendente {
+  background-color: #fff4d6;
+  color: #946200;
+}
+
+.status-andamento {
+  background-color: #e3f1ff;
+  color: #0755a5;
+}
+
+.status-concluido {
+  background-color: #e2f5e9;
+  color: #217a42;
+}
+
+.status-cancelado {
+  background-color: #fde8e8;
+  color: #bd2525;
+}
+
+/* ==========================================
+   CARTÕES DE ORDENS DE SERVIÇO
+========================================== */
+
+.item-ordem {
+  background-color: #ffffff;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  margin-bottom: 18px;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.item-ordem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+}
+
+.item-ordem h3 {
+  color: var(--azul-escuro);
+  font-size: 18px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e8edf3;
+}
+
+.item-ordem p {
+  color: #526174;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 9px;
+}
+
+.item-ordem strong {
+  color: var(--azul-escuro);
+}
+
+/* ==========================================
+   PAINEL ADMINISTRATIVO
+   CADASTRO DE TÉCNICOS E ORDENS DE SERVIÇO
+========================================== */
+
+/* ORGANIZAÇÃO DAS SEÇÕES */
+
+.admin-gerenciar-tecnicos {
+  margin-bottom: 55px;
+}
+
+.admin-secao-titulo {
+  margin-bottom: 25px;
+}
+
+.admin-secao-titulo > span {
+  color: var(--vermelho);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.admin-secao-titulo h2 {
+  color: var(--azul-escuro);
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.admin-secao-titulo p {
+  color: #657386;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* CARTÃO DOS FORMULÁRIOS */
+
+.admin-cadastro-tecnico {
+  background-color: #ffffff;
+  padding: 32px;
+  margin-bottom: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.admin-cadastro-tecnico h3 {
+  color: var(--azul-escuro);
+  font-size: 19px;
+  margin-bottom: 25px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8edf3;
+}
+
+/* ORGANIZAÇÃO DOS CAMPOS */
+
+#gerenciar-tecnicos form,
+#gerenciar-ordens form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.admin-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.admin-campo label {
+  color: #26364a;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* CAMPOS DE PREENCHIMENTO */
+
+.admin-campo input,
+.admin-campo select,
+.admin-campo textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 1px solid #d5deea;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #26364a;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.admin-campo textarea {
+  min-height: 115px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.admin-campo input::placeholder,
+.admin-campo textarea::placeholder {
+  color: #9aa6b5;
+}
+
+/* DESTAQUE DOS CAMPOS ATIVOS */
+
+.admin-campo input:focus,
+.admin-campo select:focus,
+.admin-campo textarea:focus {
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 0 3px rgba(7, 85, 165, 0.1);
+}
+
+/* CAMPOS QUE OCUPAM A LINHA INTEIRA */
+
+#gerenciar-ordens #problema-ordem {
+  grid-column: 1 / -1;
+}
+
+/* BOTÕES DOS FORMULÁRIOS */
+
+#gerenciar-tecnicos form > button,
+#gerenciar-ordens form > button {
+  min-height: 47px;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--vermelho);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+#gerenciar-tecnicos form > button:hover,
+#gerenciar-ordens form > button:hover {
+  background-color: #bd1015;
+  transform: translateY(-1px);
+}
+
+/* MENSAGENS DOS FORMULÁRIOS */
+
+#mensagem-cadastro-tecnico,
+#mensagem-ordem {
+  align-self: center;
+  color: #526174;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* CARTÕES DAS LISTAGENS */
+
+.admin-lista-tecnicos {
+  background-color: #ffffff;
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.admin-lista-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8edf3;
+}
+
+.admin-lista-cabecalho h3 {
+  color: var(--azul-escuro);
+  font-size: 18px;
+}
+
+.admin-lista-cabecalho span {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background-color: var(--azul-claro);
+  color: var(--azul-principal);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* MENSAGEM DE LISTA VAZIA */
+
+.admin-lista-vazia {
+  padding: 25px 15px;
+  color: #8995a4;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* FILTROS DAS ORDENS */
+
+.admin-filtros-ordens {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.admin-filtros-ordens .admin-campo {
+  min-width: 0;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 760px) {
+  .admin-cadastro-tecnico,
+  .admin-lista-tecnicos {
+    padding: 23px 18px;
+  }
+
+  #gerenciar-tecnicos form,
+  #gerenciar-ordens form {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  #gerenciar-ordens #problema-ordem {
+    grid-column: auto;
+  }
+
+  #gerenciar-tecnicos form > button,
+  #gerenciar-ordens form > button {
+    width: 100%;
+  }
+
+  .admin-filtros-ordens {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-secao-titulo h2 {
+    font-size: 22px;
+  }
+}
+
+/* ==========================================
+   CARTÕES DE TÉCNICOS
+========================================== */
+
+.item-tecnico {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.item-tecnico:hover {
+  border-color: #cbd8e8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.item-tecnico-informacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.item-tecnico-nome {
+  color: var(--azul-escuro);
+  font-size: 16px;
+}
+
+.item-tecnico-usuario {
+  margin: 0;
+  color: #718096;
+  font-size: 13px;
+}
+
+.status-tecnico {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-tecnico-ativo {
+  background-color: #e2f5e9;
+  color: #217a42;
+}
+
+.status-tecnico-inativo {
+  background-color: #fde8e8;
+  color: #bd2525;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 480px) {
+  .item-tecnico {
+    align-items: flex-start;
+    padding: 17px;
+  }
+}
