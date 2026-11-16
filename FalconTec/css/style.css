@@ -1254,3 +1254,503 @@ header {
     width: 100%;
   }
 }
+
+/* ==========================================
+   ÁREA TÉCNICA - TELA DE LOGIN
+========================================== */
+
+.login-tecnico {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #062d68, #0755a5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 470px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* IDENTIDADE DA EMPRESA */
+
+.login-identidade {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.login-identidade img {
+  width: 190px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 22px;
+}
+
+.login-identidade span {
+  display: block;
+  color: var(--vermelho);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.login-identidade h1 {
+  color: var(--azul-escuro);
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.login-identidade p {
+  color: #526174;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* CABEÇALHO DO FORMULÁRIO */
+
+.login-formulario-header {
+  margin-bottom: 25px;
+}
+
+.login-formulario-header h2 {
+  color: var(--azul-escuro);
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.login-formulario-header p {
+  color: #68778a;
+  font-size: 14px;
+}
+
+/* CAMPOS DO LOGIN */
+
+.login-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo-login {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.campo-login label {
+  color: #26364a;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.campo-login input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d5deea;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #26364a;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.campo-login input:focus {
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 0 3px rgba(7, 85, 165, 0.1);
+}
+
+/* OPÇÃO LEMBRAR DE MIM */
+
+.login-opcoes label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #526174;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-opcoes input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--azul-principal);
+}
+
+/* BOTÃO DE ENTRADA */
+
+.btn-login-tecnico {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--vermelho);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-login-tecnico:hover {
+  background-color: #bd1015;
+}
+
+/* MENSAGENS DO LOGIN */
+
+.mensagem-login {
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* RODAPÉ */
+
+.login-rodape {
+  border-top: 1px solid #e5eaf0;
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.login-rodape p {
+  color: #526174;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.login-rodape span {
+  color: #8a96a5;
+  font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 500px) {
+  .login-container {
+    padding: 30px 23px;
+  }
+
+  .login-identidade h1 {
+    font-size: 22px;
+  }
+
+  .login-identidade img {
+    width: 165px;
+  }
+}
+
+/* ==========================================
+   ÁREA TÉCNICA - PAINEL ADMINISTRATIVO
+========================================== */
+
+.painel-admin {
+  min-height: 100vh;
+  background-color: #f3f6fa;
+}
+
+/* CABEÇALHO */
+
+.admin-header {
+  background-color: #ffffff;
+  padding: 20px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.admin-identidade {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.admin-identidade img {
+  width: 155px;
+  object-fit: contain;
+}
+
+.admin-identidade span {
+  color: var(--vermelho);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.admin-identidade h1 {
+  color: var(--azul-escuro);
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+.admin-usuario {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-usuario div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-usuario strong {
+  color: var(--azul-escuro);
+  font-size: 14px;
+}
+
+.admin-usuario span {
+  color: #788698;
+  font-size: 12px;
+}
+
+.admin-usuario button {
+  padding: 10px 20px;
+  border: 1px solid #e0e5ec;
+  border-radius: 7px;
+  background-color: #ffffff;
+  color: var(--vermelho);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin-usuario button:hover {
+  background-color: #fff0f0;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.admin-conteudo {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 55px 6%;
+}
+
+.admin-boas-vindas {
+  margin-bottom: 35px;
+}
+
+.admin-boas-vindas span {
+  color: var(--vermelho);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.admin-boas-vindas h2 {
+  color: var(--azul-escuro);
+  font-size: 29px;
+  margin: 12px 0;
+}
+
+.admin-boas-vindas p {
+  color: #657386;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* CARDS DE RESUMO */
+
+.admin-resumo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 55px;
+}
+
+.admin-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e8edf3;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+}
+
+.admin-card span {
+  color: #657386;
+  font-size: 13px;
+}
+
+.admin-card strong {
+  display: block;
+  color: var(--azul-escuro);
+  font-size: 34px;
+  margin: 15px 0 8px;
+}
+
+.admin-card p {
+  color: #8995a4;
+  font-size: 12px;
+}
+
+/* SEÇÃO DE GERENCIAMENTO */
+
+.admin-secao h2 {
+  color: var(--azul-escuro);
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+.admin-acoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.admin-acao {
+  background-color: #ffffff;
+  padding: 28px;
+  border: 1px solid #e8edf3;
+  border-radius: 12px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.admin-acao:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.admin-acao-icone {
+  width: 45px;
+  height: 45px;
+  background-color: #eaf2fc;
+  color: var(--azul-principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-bottom: 22px;
+}
+
+.admin-acao h3 {
+  color: var(--azul-escuro);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.admin-acao p {
+  color: #657386;
+  font-size: 14px;
+  line-height: 1.7;
+  min-height: 72px;
+  margin-bottom: 20px;
+}
+
+.admin-acao button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 7px;
+  background-color: #e9edf2;
+  color: #8995a4;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
+/* RODAPÉ */
+
+.admin-rodape {
+  margin-top: 35px;
+  padding: 25px 6%;
+  background-color: #062d68;
+  text-align: center;
+}
+
+.admin-rodape p {
+  color: #ffffff;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.admin-rodape span {
+  color: #c8d8ed;
+  font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+  .admin-resumo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-acoes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 5%;
+  }
+
+  .admin-identidade {
+    gap: 15px;
+  }
+
+  .admin-identidade img {
+    width: 115px;
+  }
+
+  .admin-identidade h1 {
+    font-size: 18px;
+  }
+
+  .admin-usuario {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .admin-conteudo {
+    padding: 40px 5%;
+  }
+
+  .admin-boas-vindas h2 {
+    font-size: 24px;
+  }
+
+  .admin-resumo {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .admin-card {
+    padding: 18px;
+  }
+
+  .admin-card strong {
+    font-size: 28px;
+  }
+
+  .admin-acoes {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-acao p {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .admin-resumo {
+    grid-template-columns: 1fr;
+  }
+}

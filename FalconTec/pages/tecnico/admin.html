@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Painel administrativo da Falcontec Refrigeração."
+    />
+
+    <title>Painel Administrativo | Falcontec</title>
+
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+
+  <body>
+    <!-- PAINEL ADMINISTRATIVO -->
+    <main class="painel-admin">
+      <!-- CABEÇALHO -->
+      <header class="admin-header">
+        <div class="admin-identidade">
+          <img
+            src="../../img/falcontec_logo.png"
+            alt="Falcontec Refrigeração"
+          />
+
+          <div>
+            <span>ÁREA ADMINISTRATIVA</span>
+            <h1>Painel de controle</h1>
+          </div>
+        </div>
+
+        <div class="admin-usuario">
+          <div>
+            <strong id="nome-administrador">Administrador</strong>
+            <span>Administrador</span>
+          </div>
+
+          <button type="button" id="btn-sair">Sair</button>
+        </div>
+      </header>
+
+      <!-- CONTEÚDO PRINCIPAL -->
+      <section class="admin-conteudo">
+        <div class="admin-boas-vindas">
+          <span>FALCONTEC REFRIGERAÇÃO</span>
+          <h2>Bem-vindo ao painel administrativo</h2>
+          <p>
+            Gerencie os técnicos, acompanhe os atendimentos e organize as ordens
+            de serviço.
+          </p>
+        </div>
+
+        <!-- RESUMO -->
+        <div class="admin-resumo">
+          <article class="admin-card">
+            <span>Técnicos cadastrados</span>
+            <strong>0</strong>
+            <p>Equipe técnica</p>
+          </article>
+
+          <article class="admin-card">
+            <span>Ordens de serviço</span>
+            <strong>0</strong>
+            <p>Total de atendimentos</p>
+          </article>
+
+          <article class="admin-card">
+            <span>Serviços em andamento</span>
+            <strong>0</strong>
+            <p>Atendimentos ativos</p>
+          </article>
+
+          <article class="admin-card">
+            <span>Serviços concluídos</span>
+            <strong>0</strong>
+            <p>Atendimentos finalizados</p>
+          </article>
+        </div>
+
+        <!-- ÁREA DE GERENCIAMENTO -->
+        <div class="admin-secao">
+          <h2>Gerenciamento</h2>
+
+          <div class="admin-acoes">
+            <article class="admin-acao">
+              <div class="admin-acao-icone">
+                <span>01</span>
+              </div>
+
+              <h3>Gerenciar técnicos</h3>
+
+              <p>Cadastre, consulte e gerencie os colaboradores da equipe.</p>
+
+              <button type="button" disabled>Em desenvolvimento</button>
+            </article>
+
+            <article class="admin-acao">
+              <div class="admin-acao-icone">
+                <span>02</span>
+              </div>
+
+              <h3>Ordens de serviço</h3>
+
+              <p>
+                Crie ordens de serviço e atribua responsáveis aos atendimentos.
+              </p>
+
+              <button type="button" disabled>Em desenvolvimento</button>
+            </article>
+
+            <article class="admin-acao">
+              <div class="admin-acao-icone">
+                <span>03</span>
+              </div>
+
+              <h3>Acompanhamento</h3>
+
+              <p>Consulte o andamento dos serviços realizados pela equipe.</p>
+
+              <button type="button" disabled>Em desenvolvimento</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- RODAPÉ -->
+      <footer class="admin-rodape">
+        <p>Falcontec Refrigeração © 2026</p>
+        <span>Sistema de gerenciamento técnico</span>
+      </footer>
+    </main>
+
+    <script src="../../js/tecnico.js"></script>
+  </body>
+</html>

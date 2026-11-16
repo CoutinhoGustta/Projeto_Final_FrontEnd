@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Acesso exclusivo à área técnica da Falcontec Refrigeração."
+    />
+
+    <title>Login Técnico | Falcontec</title>
+
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+
+  <body>
+    <!-- ÁREA DE LOGIN -->
+    <main class="login-tecnico">
+      <div class="login-container">
+        <!-- IDENTIDADE DA EMPRESA -->
+        <div class="login-identidade">
+          <img
+            src="../../img/falcontec_logo.png"
+            alt="Logo Falcontec Refrigeração"
+          />
+
+          <span>ÁREA RESTRITA</span>
+
+          <h1>Bem-vindo à área técnica</h1>
+
+          <p>
+            Acesse sua conta para acompanhar atendimentos, ordens de serviço e
+            atividades da equipe.
+          </p>
+        </div>
+
+        <!-- FORMULÁRIO DE LOGIN -->
+        <div class="login-formulario">
+          <div class="login-formulario-header">
+            <h2>Entrar na plataforma</h2>
+
+            <p>Informe suas credenciais para continuar.</p>
+          </div>
+
+          <form id="form-login-tecnico">
+            <div class="campo-login">
+              <label for="usuario">Usuário</label>
+
+              <input
+                type="text"
+                id="usuario"
+                name="usuario"
+                placeholder="Digite seu usuário"
+                autocomplete="username"
+                required
+              />
+            </div>
+
+            <div class="campo-login">
+              <label for="senha">Senha</label>
+
+              <input
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder="Digite sua senha"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+
+            <div class="login-opcoes">
+              <label>
+                <input type="checkbox" id="lembrar-login" />
+
+                Lembrar de mim
+              </label>
+            </div>
+
+            <button type="submit" class="btn-login-tecnico">Entrar</button>
+
+            <p
+              id="mensagem-login"
+              class="mensagem-login"
+              aria-live="polite"
+            ></p>
+          </form>
+        </div>
+
+        <div class="login-rodape">
+          <p>Falcontec Refrigeração © 2026</p>
+          <span>Acesso exclusivo para colaboradores</span>
+        </div>
+      </div>
+    </main>
+    <script src="../../js/tecnico.js"></script>
+  </body>
+</html>
