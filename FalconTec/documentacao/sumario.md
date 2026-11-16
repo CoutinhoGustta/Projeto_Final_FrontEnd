@@ -1,4 +1,4 @@
-# Documentação do Projeto — Falcontec Refrigeração
+# Sumário Documentação do Projeto — Falcontec Refrigeração
 
 Esta pasta reúne os dicionários de código do projeto Falcontec Refrigeração. Cada documento apresenta os principais comentários existentes nos arquivos HTML, CSS e JavaScript, facilitando a localização e a compreensão de suas funcionalidades.
 
